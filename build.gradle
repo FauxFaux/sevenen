@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'com.goeswhere.sevenen.Main'
+
+dependencies {
+    compile 'com.google.guava:guava:26.0-jre'
+    compile 'io.github.dheid:blowfishj:2.16'
+    compile 'org.tukaani:xz:1.8'
+    compile 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    compile 'org.junit.jupiter:junit-jupiter-params:5.3.1'
+    runtime 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+wrapper {
+    gradleVersion = "4.10.2"
+    distributionType = Wrapper.DistributionType.ALL
+}
